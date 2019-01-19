@@ -1,0 +1,77 @@
+disabled_rules:
+    - todo
+
+opt_in_rules:
+    - closure_spacing
+    - conditional_returns_on_newline
+    - empty_count
+    - explicit_init
+    - fatal_error_message
+    - first_where
+    - force_unwrapping
+    - nimble_operator
+    - number_separator
+    - object_literal
+    - operator_usage_whitespace
+    - overridden_super_call
+    - private_outlet
+    - prohibited_super_call
+    - redundant_nil_coalescing
+    - switch_case_on_newline
+    - vertical_parameter_alignment_on_call
+    - unneeded_parentheses_in_closure_argument
+    - single_test_class
+    - joined_default_parameter
+    - pattern_matching_keywords
+    - contains_over_first_not_nil
+    - literal_expression_end_indentation
+    - closure_end_indentation
+    - sorted_first_last
+    - quick_discouraged_focused_test
+    - quick_discouraged_pending_test
+    - private_action
+    - yoda_condition
+    - untyped_error_in_catch
+    - empty_string
+    - quick_discouraged_call
+    - unavailable_function
+    - redundant_type_annotation
+    - lower_acl_than_parent
+
+line_length: 140
+
+type_name:
+    max_length: 50
+
+identifier_name:
+    min_length:
+        warning: 2
+    excluded:
+        - x
+        - y
+
+number_separator:
+    minimum_length: 6
+
+private_outlet:
+    allow_private_set: true
+
+excluded:
+    - Generated
+    - Pods
+    - vendor
+
+custom_rules:
+    no_spec_in_describe: # rule identifier
+        name: "No Spec in describe" # rule name. optional.
+        regex: '(describe|context)\(".*?Spec"\)' # matching pattern
+        match_kinds: # SyntaxKinds to match. optional.
+          - string
+          - identifier
+        message: "Describe names shouldn't end with Spec."
+    no_rx_debug: # rule identifier
+        name: "No .debug() Rx operator" # rule name. optional.
+        regex: '.debug\(\)' # matching pattern
+        match_kinds: # SyntaxKinds to match. optional.
+          - identifier
+        message: "Debug operators should not be left in production code"

@@ -3,7 +3,7 @@ platform :ios, '12.1'
 target 'Posts' do
   use_frameworks!
 
-  # Pods for Posts
+  pod 'SwiftLint', '~> 0.30.0'
 
   target 'PostsTests' do
     inherit! :search_paths
