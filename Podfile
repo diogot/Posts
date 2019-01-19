@@ -6,10 +6,10 @@ target 'Posts' do
   pod 'RxSwift', '~> 4.4.0'
   pod 'SwiftGen', '~> 6.0.2'
   pod 'SwiftLint', '~> 0.30.0'
-  
+
   target 'PostsTests' do
     inherit! :search_paths
-    # Pods for testing
+    pod 'Nimble', '~> 7.3.2'
   end
 
 end
