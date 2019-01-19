@@ -28,16 +28,14 @@ public final class NetworkClient: NetworkClientProvider {
 
     private let urlSession: URLSessionProvider
 
-    public typealias URLSessionFactory = () -> URLSessionProvider
-
     public static func defaultURLSessionFactory() -> URLSessionProvider {
         let configuration = URLSessionConfiguration.default
         configuration.timeoutIntervalForRequest = 30
         return URLSession(configuration: configuration)
     }
 
-    public init(urlSessionFactory: URLSessionFactory = NetworkClient.defaultURLSessionFactory) {
-        self.urlSession = urlSessionFactory()
+    public init(urlSession: URLSessionProvider = NetworkClient.defaultURLSessionFactory()) {
+        self.urlSession = urlSession
     }
 
     // MARK: - NetworkClientProvider
