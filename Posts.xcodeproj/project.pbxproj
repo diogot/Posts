@@ -15,11 +15,11 @@
 		D94A588821F3643900249946 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D94A588621F3643900249946 /* Localizable.strings */; };
 		D94A588B21F3653500249946 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A588A21F3653500249946 /* L10n.swift */; };
 		D970A0AA21F36D250088E653 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0A921F36D250088E653 /* Log.swift */; };
-		D970A0AC21F36E970088E653 /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0AB21F36E970088E653 /* NetworkResponse.swift */; };
-		D970A0AE21F36EAE0088E653 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0AD21F36EAE0088E653 /* NetworkRequest.swift */; };
+		D970A0AC21F36E970088E653 /* NetworkClientResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0AB21F36E970088E653 /* NetworkClientResponse.swift */; };
+		D970A0AE21F36EAE0088E653 /* NetworkClientRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0AD21F36EAE0088E653 /* NetworkClientRequest.swift */; };
 		D970A0B021F36ED10088E653 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0AF21F36ED10088E653 /* NetworkClient.swift */; };
 		D970A0B221F36F130088E653 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0B121F36F130088E653 /* URLSessionProvider.swift */; };
-		D9C99D0521F3A0BA00BB3A1E /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */; };
+		D9C99D0521F3A0BA00BB3A1E /* NetworkClientRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0421F3A0BA00BB3A1E /* NetworkClientRequestTests.swift */; };
 		D9C99D0721F3AA4300BB3A1E /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0621F3AA4300BB3A1E /* NetworkClientTests.swift */; };
 		D9C99D0A21F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0921F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift */; };
 /* End PBXBuildFile section */
@@ -50,11 +50,11 @@
 		D94A588721F3643900249946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D94A588A21F3653500249946 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		D970A0A921F36D250088E653 /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		D970A0AB21F36E970088E653 /* NetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
-		D970A0AD21F36EAE0088E653 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		D970A0AB21F36E970088E653 /* NetworkClientResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientResponse.swift; sourceTree = "<group>"; };
+		D970A0AD21F36EAE0088E653 /* NetworkClientRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientRequest.swift; sourceTree = "<group>"; };
 		D970A0AF21F36ED10088E653 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		D970A0B121F36F130088E653 /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
-		D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
+		D9C99D0421F3A0BA00BB3A1E /* NetworkClientRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientRequestTests.swift; sourceTree = "<group>"; };
 		D9C99D0621F3AA4300BB3A1E /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
 		D9C99D0921F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MaterializedSequenceResult+Extensions.swift"; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 			isa = PBXGroup;
 			children = (
 				D970A0AF21F36ED10088E653 /* NetworkClient.swift */,
-				D970A0AD21F36EAE0088E653 /* NetworkRequest.swift */,
-				D970A0AB21F36E970088E653 /* NetworkResponse.swift */,
+				D970A0AD21F36EAE0088E653 /* NetworkClientRequest.swift */,
+				D970A0AB21F36E970088E653 /* NetworkClientResponse.swift */,
 				D970A0B121F36F130088E653 /* URLSessionProvider.swift */,
 			);
 			path = Network;
@@ -191,8 +191,8 @@
 		D9C99D0321F39F4600BB3A1E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D9C99D0421F3A0BA00BB3A1E /* NetworkClientRequestTests.swift */,
 				D9C99D0621F3AA4300BB3A1E /* NetworkClientTests.swift */,
-				D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -449,12 +449,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D94A588B21F3653500249946 /* L10n.swift in Sources */,
-				D970A0AC21F36E970088E653 /* NetworkResponse.swift in Sources */,
+				D970A0AC21F36E970088E653 /* NetworkClientResponse.swift in Sources */,
 				D94A586521F3502D00249946 /* AppDelegate.swift in Sources */,
 				D970A0AA21F36D250088E653 /* Log.swift in Sources */,
 				D970A0B021F36ED10088E653 /* NetworkClient.swift in Sources */,
 				D970A0B221F36F130088E653 /* URLSessionProvider.swift in Sources */,
-				D970A0AE21F36EAE0088E653 /* NetworkRequest.swift in Sources */,
+				D970A0AE21F36EAE0088E653 /* NetworkClientRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +463,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9C99D0A21F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift in Sources */,
-				D9C99D0521F3A0BA00BB3A1E /* NetworkRequestTests.swift in Sources */,
+				D9C99D0521F3A0BA00BB3A1E /* NetworkClientRequestTests.swift in Sources */,
 				D9C99D0721F3AA4300BB3A1E /* NetworkClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

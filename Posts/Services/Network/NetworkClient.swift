@@ -10,7 +10,7 @@ import Foundation
 import RxSwift
 
 public protocol NetworkClientProvider {
-    func submit(_ request: NetworkRequest) -> Single<NetworkResponse>
+    func submit(_ request: NetworkClientRequest) -> Single<NetworkClientResponse>
 }
 
 public final class NetworkClient: NetworkClientProvider {
@@ -40,7 +40,7 @@ public final class NetworkClient: NetworkClientProvider {
 
     // MARK: - NetworkClientProvider
 
-    public func submit(_ request: NetworkRequest) -> Single<NetworkResponse> {
+    public func submit(_ request: NetworkClientRequest) -> Single<NetworkClientResponse> {
         return Single.create { single in
             log(request: request.urlRequest)
             let task = self.urlSession
@@ -55,7 +55,7 @@ public final class NetworkClient: NetworkClientProvider {
 
                     let data = data ?? Data()
                     log(response: response, data: data)
-                    single(.success(NetworkResponse(statusCode: response.statusCode, data: data)))
+                    single(.success(NetworkClientResponse(statusCode: response.statusCode, data: data)))
                 })
 
             task.resume()

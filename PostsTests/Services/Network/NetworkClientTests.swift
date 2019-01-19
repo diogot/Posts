@@ -25,9 +25,9 @@ final class NetworkClientTests: XCTestCase {
     }
 
     func testSubmit() {
-        let request = NetworkRequest(method: .get, url: url)
+        let request = NetworkClientRequest(method: .get, url: url)
         session.response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil)
-        let expectedResponse = NetworkResponse(statusCode: 200, data: Data())
+        let expectedResponse = NetworkClientResponse(statusCode: 200, data: Data())
 
         let result = client.submit(request).toBlocking().materialize()
 
@@ -37,7 +37,7 @@ final class NetworkClientTests: XCTestCase {
     }
 
     func testSubmitError() {
-        let request = NetworkRequest(method: .get, url: url)
+        let request = NetworkClientRequest(method: .get, url: url)
         let error = NSError(domain: "test", code: 123, userInfo: nil)
         session.error = error
 
@@ -49,7 +49,7 @@ final class NetworkClientTests: XCTestCase {
     }
 
     func testSubmitInconsistentHandlerCall() {
-        let request = NetworkRequest(method: .get, url: url)
+        let request = NetworkClientRequest(method: .get, url: url)
 
         let result = client.submit(request).toBlocking().materialize()
 

@@ -1,5 +1,5 @@
 //
-//  NetworkRequest.swift
+//  NetworkClientRequest.swift
 //  Posts
 //
 //  Created by Diogo on 19/01/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct NetworkRequest {
+public struct NetworkClientRequest {
     public let method: NetworkClient.Method
     public let url: URL
     public let body: Data?

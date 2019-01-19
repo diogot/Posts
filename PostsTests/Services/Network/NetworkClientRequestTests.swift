@@ -1,5 +1,5 @@
 //
-//  NetworkRequestTests.swift
+//  NetworkClientRequestTests.swift
 //  PostsTests
 //
 //  Created by Diogo on 19/01/19.
@@ -10,9 +10,9 @@ import Nimble
 @testable import Posts
 import XCTest
 
-final class NetworkRequestTests: XCTestCase {
+final class NetworkClientRequestTests: XCTestCase {
 
-    private var request: NetworkRequest!
+    private var request: NetworkClientRequest!
     private var url: URL!
     private var data: Data!
     private var headers: [String: String]!
@@ -22,7 +22,7 @@ final class NetworkRequestTests: XCTestCase {
         url = URL(string: "http://diogot.com")!
         data = "data".data(using: .utf8)!
         headers = ["header1": "fine", "header2": "go"]
-        request = NetworkRequest(method: .get, url: url, body: data, headers: headers)
+        request = NetworkClientRequest(method: .get, url: url, body: data, headers: headers)
     }
 
     func testMethod() {

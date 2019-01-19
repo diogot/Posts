@@ -1,5 +1,5 @@
 //
-//  NetworkResponse.swift
+//  NetworkClientResponse.swift
 //  Posts
 //
 //  Created by Diogo on 19/01/19.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct NetworkResponse: Equatable {
+public struct NetworkClientResponse: Equatable {
     public let statusCode: Int
     public let data: Data
 }
