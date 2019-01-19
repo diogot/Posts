@@ -9,13 +9,13 @@
 import Foundation
 
 public struct NetworkClientRequest {
-    public let method: NetworkClient.Method
+    public let method: NetworkMethod
     public let url: URL
     public let body: Data?
     public let headers: [String: String]
     public let urlRequest: URLRequest
 
-    public init(method: NetworkClient.Method, url: URL, body: Data? = nil, headers: [String: String] = [:]) {
+    public init(method: NetworkMethod, url: URL, body: Data? = nil, headers: [String: String] = [:]) {
         self.method = method
         self.url = url
         self.body = body

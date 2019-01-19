@@ -14,14 +14,6 @@ public protocol NetworkClientProvider {
 }
 
 public final class NetworkClient: NetworkClientProvider {
-    public enum Method: String {
-        case get
-        case post
-        case patch
-        case put
-        case delete
-    }
-
     public enum Error: Swift.Error {
         case unknown
     }

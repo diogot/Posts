@@ -22,6 +22,7 @@
 		D9C99D0521F3A0BA00BB3A1E /* NetworkClientRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0421F3A0BA00BB3A1E /* NetworkClientRequestTests.swift */; };
 		D9C99D0721F3AA4300BB3A1E /* NetworkClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0621F3AA4300BB3A1E /* NetworkClientTests.swift */; };
 		D9C99D0A21F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0921F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift */; };
+		D9C99D1021F3BDF800BB3A1E /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0F21F3BDF800BB3A1E /* NetworkMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D9C99D0421F3A0BA00BB3A1E /* NetworkClientRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientRequestTests.swift; sourceTree = "<group>"; };
 		D9C99D0621F3AA4300BB3A1E /* NetworkClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
 		D9C99D0921F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MaterializedSequenceResult+Extensions.swift"; sourceTree = "<group>"; };
+		D9C99D0F21F3BDF800BB3A1E /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +169,7 @@
 				D970A0AD21F36EAE0088E653 /* NetworkClientRequest.swift */,
 				D970A0AB21F36E970088E653 /* NetworkClientResponse.swift */,
 				D970A0B121F36F130088E653 /* URLSessionProvider.swift */,
+				D9C99D0F21F3BDF800BB3A1E /* NetworkMethod.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				D970A0B021F36ED10088E653 /* NetworkClient.swift in Sources */,
 				D970A0B221F36F130088E653 /* URLSessionProvider.swift in Sources */,
 				D970A0AE21F36EAE0088E653 /* NetworkClientRequest.swift in Sources */,
+				D9C99D1021F3BDF800BB3A1E /* NetworkMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
