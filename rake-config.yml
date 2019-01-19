@@ -19,11 +19,11 @@ setup:
 
 swiftgen:
   strings:
-    enabled: false
+    enabled: true
     path: Pods/SwiftGen/bin/swiftgen
-    template: dot-syntax-swift3
+    template: structured-swift4
     strings:
-      'Watch Extension/Resources/en.lproj/Localizable.strings': 'Watch Extension/Generated/L10n.swift'
+      'Posts/Resources/Base.lproj/Localizable.strings': 'Posts/Generated/L10n.swift'
 
 xcode:
   version: 10.1*

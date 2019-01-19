@@ -13,6 +13,8 @@
 		D94A586C21F3502F00249946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94A586B21F3502F00249946 /* Assets.xcassets */; };
 		D94A586F21F3502F00249946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94A586D21F3502F00249946 /* LaunchScreen.storyboard */; };
 		D94A587A21F3502F00249946 /* PostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A587921F3502F00249946 /* PostsTests.swift */; };
+		D94A588821F3643900249946 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D94A588621F3643900249946 /* Localizable.strings */; };
+		D94A588B21F3653500249946 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A588A21F3653500249946 /* L10n.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		D94A587521F3502F00249946 /* PostsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94A587921F3502F00249946 /* PostsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTests.swift; sourceTree = "<group>"; };
 		D94A587B21F3502F00249946 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D94A588721F3643900249946 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D94A588A21F3653500249946 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,11 +89,11 @@
 		D94A585821F3502C00249946 = {
 			isa = PBXGroup;
 			children = (
+				B6F9BBD98F396C7593B4DC81 /* Frameworks */,
+				7D4BBC5467C13C628808A2BD /* Pods */,
 				D94A586321F3502D00249946 /* Posts */,
 				D94A587821F3502F00249946 /* PostsTests */,
 				D94A586221F3502D00249946 /* Products */,
-				7D4BBC5467C13C628808A2BD /* Pods */,
-				B6F9BBD98F396C7593B4DC81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,10 +109,9 @@
 		D94A586321F3502D00249946 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				D94A588C21F3658000249946 /* Generated */,
+				D94A588521F3620400249946 /* Resources */,
 				D94A586421F3502D00249946 /* AppDelegate.swift */,
-				D94A586B21F3502F00249946 /* Assets.xcassets */,
-				D94A586D21F3502F00249946 /* LaunchScreen.storyboard */,
-				D94A587021F3502F00249946 /* Info.plist */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -116,10 +119,29 @@
 		D94A587821F3502F00249946 /* PostsTests */ = {
 			isa = PBXGroup;
 			children = (
-				D94A587921F3502F00249946 /* PostsTests.swift */,
 				D94A587B21F3502F00249946 /* Info.plist */,
+				D94A587921F3502F00249946 /* PostsTests.swift */,
 			);
 			path = PostsTests;
+			sourceTree = "<group>";
+		};
+		D94A588521F3620400249946 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D94A586B21F3502F00249946 /* Assets.xcassets */,
+				D94A587021F3502F00249946 /* Info.plist */,
+				D94A586D21F3502F00249946 /* LaunchScreen.storyboard */,
+				D94A588621F3643900249946 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D94A588C21F3658000249946 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				D94A588A21F3653500249946 /* L10n.swift */,
+			);
+			path = Generated;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +152,7 @@
 			buildConfigurationList = D94A587E21F3502F00249946 /* Build configuration list for PBXNativeTarget "Posts" */;
 			buildPhases = (
 				B336C0E2D211DC865781EA46 /* [CP] Check Pods Manifest.lock */,
+				D94A588D21F3667000249946 /* Run SwiftGen */,
 				D94A588421F35B4800249946 /* Run SwiftLint */,
 				D94A585D21F3502D00249946 /* Sources */,
 				D94A585E21F3502D00249946 /* Frameworks */,
@@ -207,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D94A586F21F3502F00249946 /* LaunchScreen.storyboard in Resources */,
+				D94A588821F3643900249946 /* Localizable.strings in Resources */,
 				D94A586C21F3502F00249946 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,6 +285,24 @@
 			shellPath = /bin/sh;
 			shellScript = "${PODS_ROOT}/SwiftLint/swiftlint\n";
 		};
+		D94A588D21F3667000249946 /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftGen";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "rakelib/run.sh \"rake swiftgen\"\n";
+		};
 		EF08CE6D9E056A83E2CA3F53 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D94A588B21F3653500249946 /* L10n.swift in Sources */,
 				D94A586521F3502D00249946 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,6 +362,16 @@
 				D94A586E21F3502F00249946 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
+			sourceTree = "<group>";
+		};
+		D94A588621F3643900249946 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D94A588721F3643900249946 /* Base */,
+			);
+			name = Localizable.strings;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -370,6 +423,7 @@
 					"$(inherited)",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -382,6 +436,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -425,6 +480,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
@@ -436,6 +492,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -447,14 +504,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQRRG9G4R7;
-				INFOPLIST_FILE = Posts/Info.plist;
+				INFOPLIST_FILE = Posts/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.diogot.exercises.Posts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -466,14 +522,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQRRG9G4R7;
-				INFOPLIST_FILE = Posts/Info.plist;
+				INFOPLIST_FILE = Posts/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.diogot.exercises.Posts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
