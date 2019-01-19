@@ -19,6 +19,7 @@
 		D970A0AE21F36EAE0088E653 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0AD21F36EAE0088E653 /* NetworkRequest.swift */; };
 		D970A0B021F36ED10088E653 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0AF21F36ED10088E653 /* NetworkClient.swift */; };
 		D970A0B221F36F130088E653 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0B121F36F130088E653 /* URLSessionProvider.swift */; };
+		D9C99D0521F3A0BA00BB3A1E /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D970A0AD21F36EAE0088E653 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		D970A0AF21F36ED10088E653 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		D970A0B121F36F130088E653 /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
+		D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -184,6 +186,7 @@
 		D9C99D0321F39F4600BB3A1E /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C99D0521F3A0BA00BB3A1E /* NetworkRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
