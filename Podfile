@@ -10,6 +10,7 @@ target 'Posts' do
   target 'PostsTests' do
     inherit! :search_paths
     pod 'Nimble', '~> 7.3.2'
+    pod 'RxBlocking', '~> 4.4.0'
   end
 
 end

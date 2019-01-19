@@ -1,6 +1,9 @@
 PODS:
   - Nimble (7.3.2)
   - RxAtomic (4.4.0)
+  - RxBlocking (4.4.0):
+    - RxAtomic (~> 4.4)
+    - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SwiftGen (6.0.2)
@@ -8,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Nimble (~> 7.3.2)
+  - RxBlocking (~> 4.4.0)
   - RxSwift (~> 4.4.0)
   - SwiftGen (~> 6.0.2)
   - SwiftLint (~> 0.30.0)
@@ -16,6 +20,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Nimble
     - RxAtomic
+    - RxBlocking
     - RxSwift
     - SwiftGen
     - SwiftLint
@@ -23,10 +28,11 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Nimble: 5e94a8cacb355943c6c87198035dc4adbb0f10e4
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxBlocking: 138ad53217434444d6eeeb4fb406a45431d92e31
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
   SwiftLint: 4e37cb5cd33435170dfd09fba089f41fdbf64d53
 
-PODFILE CHECKSUM: 82142eed28f670f751c0542fe151cfc771770f6d
+PODFILE CHECKSUM: a38df5a2cd2c8c5674ee1db4fbef2ddda79b1eef
 
 COCOAPODS: 1.5.3

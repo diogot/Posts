@@ -20,6 +20,7 @@
 		D970A0B021F36ED10088E653 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0AF21F36ED10088E653 /* NetworkClient.swift */; };
 		D970A0B221F36F130088E653 /* URLSessionProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D970A0B121F36F130088E653 /* URLSessionProvider.swift */; };
 		D9C99D0521F3A0BA00BB3A1E /* NetworkRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */; };
+		D9C99D0A21F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0921F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		D970A0AF21F36ED10088E653 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		D970A0B121F36F130088E653 /* URLSessionProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProvider.swift; sourceTree = "<group>"; };
 		D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestTests.swift; sourceTree = "<group>"; };
+		D9C99D0921F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MaterializedSequenceResult+Extensions.swift"; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +132,7 @@
 		D94A587821F3502F00249946 /* PostsTests */ = {
 			isa = PBXGroup;
 			children = (
+				D9C99D0821F3AF5700BB3A1E /* Extensions */,
 				D9C99D0221F39F3E00BB3A1E /* Services */,
 				D94A587B21F3502F00249946 /* Info.plist */,
 			);
@@ -189,6 +192,14 @@
 				D9C99D0421F3A0BA00BB3A1E /* NetworkRequestTests.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D9C99D0821F3AF5700BB3A1E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9C99D0921F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,13 +339,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PostsTests/Pods-PostsTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -442,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9C99D0A21F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift in Sources */,
 				D9C99D0521F3A0BA00BB3A1E /* NetworkRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
