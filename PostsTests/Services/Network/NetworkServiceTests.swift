@@ -136,8 +136,3 @@ private final class FakeDecoder: NetworkServiceDecodingProvider {
 private enum TestError: Error {
     case decoderError
 }
-
-private struct Model: Decodable, Equatable {
-    let name: String
-    let age: Int
-}
