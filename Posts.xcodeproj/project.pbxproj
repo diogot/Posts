@@ -25,6 +25,7 @@
 		D9C99D0C21F3B6AC00BB3A1E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0B21F3B6AC00BB3A1E /* NetworkService.swift */; };
 		D9C99D0E21F3BD1600BB3A1E /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0D21F3BD1600BB3A1E /* NetworkRequest.swift */; };
 		D9C99D1021F3BDF800BB3A1E /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0F21F3BDF800BB3A1E /* NetworkMethod.swift */; };
+		D9C99D1E21F4DCB800BB3A1E /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D1D21F4DCB800BB3A1E /* NetworkServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		D9C99D0B21F3B6AC00BB3A1E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D9C99D0D21F3BD1600BB3A1E /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		D9C99D0F21F3BDF800BB3A1E /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
+		D9C99D1D21F4DCB800BB3A1E /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -202,6 +204,7 @@
 			children = (
 				D9C99D0421F3A0BA00BB3A1E /* NetworkClientRequestTests.swift */,
 				D9C99D0621F3AA4300BB3A1E /* NetworkClientTests.swift */,
+				D9C99D1D21F4DCB800BB3A1E /* NetworkServiceTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 			files = (
 				D9C99D0A21F3AF8100BB3A1E /* MaterializedSequenceResult+Extensions.swift in Sources */,
 				D9C99D0521F3A0BA00BB3A1E /* NetworkClientRequestTests.swift in Sources */,
+				D9C99D1E21F4DCB800BB3A1E /* NetworkServiceTests.swift in Sources */,
 				D9C99D0721F3AA4300BB3A1E /* NetworkClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

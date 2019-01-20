@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct NetworkClientRequest {
+public struct NetworkClientRequest: Equatable {
     public let method: NetworkMethod
     public let url: URL
     public let body: Data?

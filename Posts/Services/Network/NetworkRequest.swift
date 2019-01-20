@@ -24,7 +24,7 @@ public struct NetworkRequest {
 
     public typealias Parameters = [String: String?]
 
-    public struct Resource: RawRepresentable {
+    public struct Resource: RawRepresentable, Equatable {
         public let rawValue: String
         public init(rawValue: String) {
             self.rawValue = rawValue
