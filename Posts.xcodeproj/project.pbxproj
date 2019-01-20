@@ -32,6 +32,7 @@
 		D9C99D1E21F4DCB800BB3A1E /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D1D21F4DCB800BB3A1E /* NetworkServiceTests.swift */; };
 		D9CA256B21F4F0AB00B6E292 /* NetworkServiceEncoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA256A21F4F0AB00B6E292 /* NetworkServiceEncoderTests.swift */; };
 		D9CA256E21F4F25900B6E292 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA256D21F4F25900B6E292 /* Model.swift */; };
+		D9CA257021F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA256F21F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		D9C99D1D21F4DCB800BB3A1E /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		D9CA256A21F4F0AB00B6E292 /* NetworkServiceEncoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceEncoderTests.swift; sourceTree = "<group>"; };
 		D9CA256D21F4F25900B6E292 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D9CA256F21F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceURLBuilderTests.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 				D9C99D0621F3AA4300BB3A1E /* NetworkClientTests.swift */,
 				D9C99D1D21F4DCB800BB3A1E /* NetworkServiceTests.swift */,
 				D9CA256A21F4F0AB00B6E292 /* NetworkServiceEncoderTests.swift */,
+				D9CA256F21F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				D9C99D0521F3A0BA00BB3A1E /* NetworkClientRequestTests.swift in Sources */,
 				D9C99D1E21F4DCB800BB3A1E /* NetworkServiceTests.swift in Sources */,
 				D9CA256E21F4F25900B6E292 /* Model.swift in Sources */,
+				D9CA257021F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift in Sources */,
 				D9CA256B21F4F0AB00B6E292 /* NetworkServiceEncoderTests.swift in Sources */,
 				D9C99D0721F3AA4300BB3A1E /* NetworkClientTests.swift in Sources */,
 			);
