@@ -25,6 +25,7 @@
 		D9C99D0C21F3B6AC00BB3A1E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0B21F3B6AC00BB3A1E /* NetworkService.swift */; };
 		D9C99D0E21F3BD1600BB3A1E /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0D21F3BD1600BB3A1E /* NetworkRequest.swift */; };
 		D9C99D1021F3BDF800BB3A1E /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D0F21F3BDF800BB3A1E /* NetworkMethod.swift */; };
+		D9C99D1421F4D0EE00BB3A1E /* NetworkServiceEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D1321F4D0EE00BB3A1E /* NetworkServiceEncoder.swift */; };
 		D9C99D1821F4D15200BB3A1E /* NetworkServiceHeadersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D1721F4D15200BB3A1E /* NetworkServiceHeadersBuilder.swift */; };
 		D9C99D1E21F4DCB800BB3A1E /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C99D1D21F4DCB800BB3A1E /* NetworkServiceTests.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		D9C99D0B21F3B6AC00BB3A1E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		D9C99D0D21F3BD1600BB3A1E /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		D9C99D0F21F3BDF800BB3A1E /* NetworkMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
+		D9C99D1321F4D0EE00BB3A1E /* NetworkServiceEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceEncoder.swift; sourceTree = "<group>"; };
 		D9C99D1721F4D15200BB3A1E /* NetworkServiceHeadersBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceHeadersBuilder.swift; sourceTree = "<group>"; };
 		D9C99D1D21F4DCB800BB3A1E /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				D970A0AD21F36EAE0088E653 /* NetworkClientRequest.swift */,
 				D970A0AB21F36E970088E653 /* NetworkClientResponse.swift */,
 				D9C99D0B21F3B6AC00BB3A1E /* NetworkService.swift */,
+				D9C99D1321F4D0EE00BB3A1E /* NetworkServiceEncoder.swift */,
 				D9C99D1721F4D15200BB3A1E /* NetworkServiceHeadersBuilder.swift */,
 				D970A0B121F36F130088E653 /* URLSessionProvider.swift */,
 				D9C99D0D21F3BD1600BB3A1E /* NetworkRequest.swift */,
@@ -472,6 +475,7 @@
 				D970A0B021F36ED10088E653 /* NetworkClient.swift in Sources */,
 				D970A0B221F36F130088E653 /* URLSessionProvider.swift in Sources */,
 				D9C99D0E21F3BD1600BB3A1E /* NetworkRequest.swift in Sources */,
+				D9C99D1421F4D0EE00BB3A1E /* NetworkServiceEncoder.swift in Sources */,
 				D970A0AE21F36EAE0088E653 /* NetworkClientRequest.swift in Sources */,
 				D9C99D1021F3BDF800BB3A1E /* NetworkMethod.swift in Sources */,
 			);
