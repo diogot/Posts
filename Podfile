@@ -6,6 +6,7 @@ target 'Posts' do
   pod 'RxSwift', '~> 4.4.0'
   pod 'SwiftGen', '~> 6.0.2'
   pod 'SwiftLint', '~> 0.30.0'
+  pod 'Tagged', '~> 0.2.0'
 
   target 'PostsTests' do
     inherit! :search_paths
