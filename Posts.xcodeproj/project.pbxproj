@@ -47,12 +47,14 @@
 		D9CA258A21F5D91800B6E292 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA258921F5D91800B6E292 /* Comment.swift */; };
 		D9CA258C21F5D98100B6E292 /* comment.json in Resources */ = {isa = PBXBuildFile; fileRef = D9CA258B21F5D98100B6E292 /* comment.json */; };
 		D9CA258E21F5D9AF00B6E292 /* CommentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA258D21F5D9AF00B6E292 /* CommentTests.swift */; };
+		D9CA259121F5E34500B6E292 /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259021F5E34500B6E292 /* PostsService.swift */; };
 		D9CA259321F5E51C00B6E292 /* PostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259221F5E51C00B6E292 /* PostsAPI.swift */; };
 		D9CA259521F5E56D00B6E292 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259421F5E56D00B6E292 /* UsersAPI.swift */; };
 		D9CA259A21F5E9C000B6E292 /* PostsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259921F5E9C000B6E292 /* PostsAPITests.swift */; };
 		D9CA259C21F5E9FC00B6E292 /* FakeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259B21F5E9FC00B6E292 /* FakeNetworkService.swift */; };
 		D9CA259E21F5FEFC00B6E292 /* ModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259D21F5FEFC00B6E292 /* ModelFactory.swift */; };
 		D9CA25A021F6146E00B6E292 /* UsersAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259F21F6146E00B6E292 /* UsersAPITests.swift */; };
+		D9CA25A221F615BF00B6E292 /* PostsServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA25A121F615BF00B6E292 /* PostsServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,12 +115,14 @@
 		D9CA258921F5D91800B6E292 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		D9CA258B21F5D98100B6E292 /* comment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comment.json; sourceTree = "<group>"; };
 		D9CA258D21F5D9AF00B6E292 /* CommentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTests.swift; sourceTree = "<group>"; };
+		D9CA259021F5E34500B6E292 /* PostsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		D9CA259221F5E51C00B6E292 /* PostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPI.swift; sourceTree = "<group>"; };
 		D9CA259421F5E56D00B6E292 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
 		D9CA259921F5E9C000B6E292 /* PostsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPITests.swift; sourceTree = "<group>"; };
 		D9CA259B21F5E9FC00B6E292 /* FakeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkService.swift; sourceTree = "<group>"; };
 		D9CA259D21F5FEFC00B6E292 /* ModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFactory.swift; sourceTree = "<group>"; };
 		D9CA259F21F6146E00B6E292 /* UsersAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPITests.swift; sourceTree = "<group>"; };
+		D9CA25A121F615BF00B6E292 /* PostsServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsServiceTests.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -250,8 +254,8 @@
 		D970A0A821F36D0B0088E653 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D9CA258F21F5E33400B6E292 /* Posts */,
 				D94A588E21F36C0E00249946 /* Network */,
+				D9CA258F21F5E33400B6E292 /* Posts */,
 				D970A0A921F36D250088E653 /* Log.swift */,
 			);
 			path = Services;
@@ -260,8 +264,8 @@
 		D9C99D0221F39F3E00BB3A1E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				D9CA259821F5E9A900B6E292 /* Posts */,
 				D9C99D0321F39F4600BB3A1E /* Network */,
+				D9CA259821F5E9A900B6E292 /* Posts */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -291,8 +295,8 @@
 		D9CA256C21F4F16A00B6E292 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				D9CA256D21F4F25900B6E292 /* Model.swift */,
 				D9CA259B21F5E9FC00B6E292 /* FakeNetworkService.swift */,
+				D9CA256D21F4F25900B6E292 /* Model.swift */,
 				D9CA259D21F5FEFC00B6E292 /* ModelFactory.swift */,
 			);
 			path = Common;
@@ -340,6 +344,7 @@
 			isa = PBXGroup;
 			children = (
 				D9CA259221F5E51C00B6E292 /* PostsAPI.swift */,
+				D9CA259021F5E34500B6E292 /* PostsService.swift */,
 				D9CA259421F5E56D00B6E292 /* UsersAPI.swift */,
 			);
 			path = Posts;
@@ -349,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				D9CA259921F5E9C000B6E292 /* PostsAPITests.swift */,
+				D9CA25A121F615BF00B6E292 /* PostsServiceTests.swift */,
 				D9CA259F21F6146E00B6E292 /* UsersAPITests.swift */,
 			);
 			path = Posts;
@@ -604,6 +610,7 @@
 			files = (
 				D94A588B21F3653500249946 /* L10n.swift in Sources */,
 				D9C99D1821F4D15200BB3A1E /* NetworkServiceHeadersBuilder.swift in Sources */,
+				D9CA259121F5E34500B6E292 /* PostsService.swift in Sources */,
 				D970A0AC21F36E970088E653 /* NetworkClientResponse.swift in Sources */,
 				D9C99D0C21F3B6AC00BB3A1E /* NetworkService.swift in Sources */,
 				D9C99D1A21F4D16D00BB3A1E /* NetworkServiceDecoder.swift in Sources */,
@@ -639,6 +646,7 @@
 				D9CA259C21F5E9FC00B6E292 /* FakeNetworkService.swift in Sources */,
 				D9CA258621F5D82F00B6E292 /* UserTests.swift in Sources */,
 				D9CA257421F4FA5500B6E292 /* NetworkServiceDecoderTests.swift in Sources */,
+				D9CA25A221F615BF00B6E292 /* PostsServiceTests.swift in Sources */,
 				D9CA258E21F5D9AF00B6E292 /* CommentTests.swift in Sources */,
 				D9CA257221F4F8FB00B6E292 /* NetworkServiceValidatorTests.swift in Sources */,
 				D9CA256B21F4F0AB00B6E292 /* NetworkServiceEncoderTests.swift in Sources */,
