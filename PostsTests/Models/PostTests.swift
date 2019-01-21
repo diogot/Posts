@@ -10,10 +10,9 @@ import Nimble
 @testable import Posts
 import XCTest
 
-class PostTests: XCTestCase {
+final class PostTests: XCTestCase {
     func testDecodable() {
-        let bundle = Bundle(for: type(of: self))
-        let json = try! Data(contentsOf: bundle.url(forResource: "user", withExtension: "json")!)
+        let json = ModelFactory().json(of: .user)
 
         var user: User?
         expect {

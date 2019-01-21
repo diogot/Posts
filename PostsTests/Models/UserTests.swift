@@ -12,8 +12,7 @@ import XCTest
 
 class UserTests: XCTestCase {
     func testDecodable() {
-        let bundle = Bundle(for: type(of: self))
-        let json = try! Data(contentsOf: bundle.url(forResource: "post", withExtension: "json")!)
+        let json = ModelFactory().json(of: .user)
 
         var post: Post?
         expect {

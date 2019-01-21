@@ -12,8 +12,7 @@ import XCTest
 
 class CommentTests: XCTestCase {
     func testDecodable() {
-        let bundle = Bundle(for: type(of: self))
-        let json = try! Data(contentsOf: bundle.url(forResource: "comment", withExtension: "json")!)
+        let json = ModelFactory().json(of: .comment)
 
         var user: Comment?
         expect {
