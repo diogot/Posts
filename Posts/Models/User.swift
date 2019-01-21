@@ -9,7 +9,7 @@
 import Foundation
 import Tagged
 
-struct User: Decodable {
+struct User: Decodable, Equatable {
     let id: Id
     let name: String
     let username: String
