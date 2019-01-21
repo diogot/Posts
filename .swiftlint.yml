@@ -42,6 +42,8 @@ line_length: 140
 
 type_name:
     max_length: 50
+    excluded:
+      - Id
 
 identifier_name:
     min_length:

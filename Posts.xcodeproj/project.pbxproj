@@ -38,6 +38,15 @@
 		D9CA257221F4F8FB00B6E292 /* NetworkServiceValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA257121F4F8FB00B6E292 /* NetworkServiceValidatorTests.swift */; };
 		D9CA257421F4FA5500B6E292 /* NetworkServiceDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA257321F4FA5500B6E292 /* NetworkServiceDecoderTests.swift */; };
 		D9CA257721F543C700B6E292 /* PrimitiveSequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA257621F543C700B6E292 /* PrimitiveSequence+Extensions.swift */; };
+		D9CA257A21F5D0F500B6E292 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA257921F5D0F500B6E292 /* Post.swift */; };
+		D9CA257F21F5D1FF00B6E292 /* PostTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA257E21F5D1FF00B6E292 /* PostTests.swift */; };
+		D9CA258221F5D35300B6E292 /* post.json in Resources */ = {isa = PBXBuildFile; fileRef = D9CA258121F5D35300B6E292 /* post.json */; };
+		D9CA258421F5D65600B6E292 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA258321F5D65600B6E292 /* User.swift */; };
+		D9CA258621F5D82F00B6E292 /* UserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA258521F5D82F00B6E292 /* UserTests.swift */; };
+		D9CA258821F5D86000B6E292 /* user.json in Resources */ = {isa = PBXBuildFile; fileRef = D9CA258721F5D86000B6E292 /* user.json */; };
+		D9CA258A21F5D91800B6E292 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA258921F5D91800B6E292 /* Comment.swift */; };
+		D9CA258C21F5D98100B6E292 /* comment.json in Resources */ = {isa = PBXBuildFile; fileRef = D9CA258B21F5D98100B6E292 /* comment.json */; };
+		D9CA258E21F5D9AF00B6E292 /* CommentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA258D21F5D9AF00B6E292 /* CommentTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +98,15 @@
 		D9CA257121F4F8FB00B6E292 /* NetworkServiceValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceValidatorTests.swift; sourceTree = "<group>"; };
 		D9CA257321F4FA5500B6E292 /* NetworkServiceDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceDecoderTests.swift; sourceTree = "<group>"; };
 		D9CA257621F543C700B6E292 /* PrimitiveSequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Extensions.swift"; sourceTree = "<group>"; };
+		D9CA257921F5D0F500B6E292 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D9CA257E21F5D1FF00B6E292 /* PostTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTests.swift; sourceTree = "<group>"; };
+		D9CA258121F5D35300B6E292 /* post.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = post.json; sourceTree = "<group>"; };
+		D9CA258321F5D65600B6E292 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D9CA258521F5D82F00B6E292 /* UserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTests.swift; sourceTree = "<group>"; };
+		D9CA258721F5D86000B6E292 /* user.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = user.json; sourceTree = "<group>"; };
+		D9CA258921F5D91800B6E292 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		D9CA258B21F5D98100B6E292 /* comment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comment.json; sourceTree = "<group>"; };
+		D9CA258D21F5D9AF00B6E292 /* CommentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTests.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,6 +175,7 @@
 			children = (
 				D9CA257521F543AA00B6E292 /* Extensions */,
 				D94A588C21F3658000249946 /* Generated */,
+				D9CA257821F5CE7600B6E292 /* Models */,
 				D94A588521F3620400249946 /* Resources */,
 				D970A0A821F36D0B0088E653 /* Services */,
 				D94A586421F3502D00249946 /* AppDelegate.swift */,
@@ -169,6 +188,8 @@
 			children = (
 				D9CA256C21F4F16A00B6E292 /* Common */,
 				D9C99D0821F3AF5700BB3A1E /* Extensions */,
+				D9CA257D21F5D1EB00B6E292 /* Models */,
+				D9CA258021F5D33100B6E292 /* Resources */,
 				D9C99D0221F39F3E00BB3A1E /* Services */,
 				D94A587B21F3502F00249946 /* Info.plist */,
 			);
@@ -269,6 +290,36 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D9CA257821F5CE7600B6E292 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9CA258921F5D91800B6E292 /* Comment.swift */,
+				D9CA257921F5D0F500B6E292 /* Post.swift */,
+				D9CA258321F5D65600B6E292 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9CA257D21F5D1EB00B6E292 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D9CA258D21F5D9AF00B6E292 /* CommentTests.swift */,
+				D9CA257E21F5D1FF00B6E292 /* PostTests.swift */,
+				D9CA258521F5D82F00B6E292 /* UserTests.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D9CA258021F5D33100B6E292 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9CA258B21F5D98100B6E292 /* comment.json */,
+				D9CA258121F5D35300B6E292 /* post.json */,
+				D9CA258721F5D86000B6E292 /* user.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -367,6 +418,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9CA258C21F5D98100B6E292 /* comment.json in Resources */,
+				D9CA258821F5D86000B6E292 /* user.json in Resources */,
+				D9CA258221F5D35300B6E292 /* post.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,8 +583,11 @@
 				D9C99D0E21F3BD1600BB3A1E /* NetworkRequest.swift in Sources */,
 				D9C99D1421F4D0EE00BB3A1E /* NetworkServiceEncoder.swift in Sources */,
 				D9C99D1621F4D10E00BB3A1E /* NetworkServiceValidator.swift in Sources */,
+				D9CA258A21F5D91800B6E292 /* Comment.swift in Sources */,
+				D9CA257A21F5D0F500B6E292 /* Post.swift in Sources */,
 				D970A0AE21F36EAE0088E653 /* NetworkClientRequest.swift in Sources */,
 				D9C99D1021F3BDF800BB3A1E /* NetworkMethod.swift in Sources */,
+				D9CA258421F5D65600B6E292 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,10 +600,13 @@
 				D9C99D1E21F4DCB800BB3A1E /* NetworkServiceTests.swift in Sources */,
 				D9CA256E21F4F25900B6E292 /* Model.swift in Sources */,
 				D9CA257021F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift in Sources */,
+				D9CA258621F5D82F00B6E292 /* UserTests.swift in Sources */,
 				D9CA257421F4FA5500B6E292 /* NetworkServiceDecoderTests.swift in Sources */,
+				D9CA258E21F5D9AF00B6E292 /* CommentTests.swift in Sources */,
 				D9CA257221F4F8FB00B6E292 /* NetworkServiceValidatorTests.swift in Sources */,
 				D9CA256B21F4F0AB00B6E292 /* NetworkServiceEncoderTests.swift in Sources */,
 				D9C99D0721F3AA4300BB3A1E /* NetworkClientTests.swift in Sources */,
+				D9CA257F21F5D1FF00B6E292 /* PostTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
