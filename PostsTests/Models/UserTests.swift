@@ -14,14 +14,15 @@ class UserTests: XCTestCase {
     func testDecodable() {
         let json = ModelFactory().json(of: .user)
 
-        var post: Post?
+        var user: User?
         expect {
-            post = try JSONDecoder().decode(Post.self, from: json)
+            user = try JSONDecoder().decode(User.self, from: json)
         }.toNot(throwError())
 
-        expect(post?.id.rawValue) == 1
-        expect(post?.userId.rawValue) == 10
-        expect(post?.title) == "some title"
-        expect(post?.body) == "some body"
+        expect(user?.id.rawValue) == 1
+        expect(user?.name) == "Leanne Graham"
+        expect(user?.username) == "Bret"
+        expect(user?.email) == "Sincere@april.biz"
+        expect(user?.website) == URL(string: "hildegard.org")!
     }
 }

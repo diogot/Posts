@@ -12,17 +12,16 @@ import XCTest
 
 final class PostTests: XCTestCase {
     func testDecodable() {
-        let json = ModelFactory().json(of: .user)
+        let json = ModelFactory().json(of: .post)
 
-        var user: User?
+        var post: Post?
         expect {
-            user = try JSONDecoder().decode(User.self, from: json)
+            post = try JSONDecoder().decode(Post.self, from: json)
         }.toNot(throwError())
 
-        expect(user?.id.rawValue) == 1
-        expect(user?.name) == "Leanne Graham"
-        expect(user?.username) == "Bret"
-        expect(user?.email) == "Sincere@april.biz"
-        expect(user?.website) == URL(string: "hildegard.org")!
+        expect(post?.id.rawValue) == 1
+        expect(post?.userId.rawValue) == 10
+        expect(post?.title) == "some title"
+        expect(post?.body) == "some body"
     }
 }
