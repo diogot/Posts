@@ -47,6 +47,8 @@
 		D9CA258A21F5D91800B6E292 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA258921F5D91800B6E292 /* Comment.swift */; };
 		D9CA258C21F5D98100B6E292 /* comment.json in Resources */ = {isa = PBXBuildFile; fileRef = D9CA258B21F5D98100B6E292 /* comment.json */; };
 		D9CA258E21F5D9AF00B6E292 /* CommentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA258D21F5D9AF00B6E292 /* CommentTests.swift */; };
+		D9CA259321F5E51C00B6E292 /* PostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259221F5E51C00B6E292 /* PostsAPI.swift */; };
+		D9CA259A21F5E9C000B6E292 /* PostsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259921F5E9C000B6E292 /* PostsAPITests.swift */; };
 		D9CA259C21F5E9FC00B6E292 /* FakeNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259B21F5E9FC00B6E292 /* FakeNetworkService.swift */; };
 		D9CA259E21F5FEFC00B6E292 /* ModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA259D21F5FEFC00B6E292 /* ModelFactory.swift */; };
 /* End PBXBuildFile section */
@@ -109,6 +111,8 @@
 		D9CA258921F5D91800B6E292 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		D9CA258B21F5D98100B6E292 /* comment.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = comment.json; sourceTree = "<group>"; };
 		D9CA258D21F5D9AF00B6E292 /* CommentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTests.swift; sourceTree = "<group>"; };
+		D9CA259221F5E51C00B6E292 /* PostsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPI.swift; sourceTree = "<group>"; };
+		D9CA259921F5E9C000B6E292 /* PostsAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsAPITests.swift; sourceTree = "<group>"; };
 		D9CA259B21F5E9FC00B6E292 /* FakeNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkService.swift; sourceTree = "<group>"; };
 		D9CA259D21F5FEFC00B6E292 /* ModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFactory.swift; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 		D970A0A821F36D0B0088E653 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D9CA258F21F5E33400B6E292 /* Posts */,
 				D94A588E21F36C0E00249946 /* Network */,
 				D970A0A921F36D250088E653 /* Log.swift */,
 			);
@@ -251,6 +256,7 @@
 		D9C99D0221F39F3E00BB3A1E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D9CA259821F5E9A900B6E292 /* Posts */,
 				D9C99D0321F39F4600BB3A1E /* Network */,
 			);
 			path = Services;
@@ -324,6 +330,22 @@
 				D9CA258721F5D86000B6E292 /* user.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D9CA258F21F5E33400B6E292 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				D9CA259221F5E51C00B6E292 /* PostsAPI.swift */,
+			);
+			path = Posts;
+			sourceTree = "<group>";
+		};
+		D9CA259821F5E9A900B6E292 /* Posts */ = {
+			isa = PBXGroup;
+			children = (
+				D9CA259921F5E9C000B6E292 /* PostsAPITests.swift */,
+			);
+			path = Posts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -587,6 +609,7 @@
 				D9C99D1C21F4D19800BB3A1E /* NetworkServiceError.swift in Sources */,
 				D970A0B221F36F130088E653 /* URLSessionProvider.swift in Sources */,
 				D9C99D0E21F3BD1600BB3A1E /* NetworkRequest.swift in Sources */,
+				D9CA259321F5E51C00B6E292 /* PostsAPI.swift in Sources */,
 				D9C99D1421F4D0EE00BB3A1E /* NetworkServiceEncoder.swift in Sources */,
 				D9C99D1621F4D10E00BB3A1E /* NetworkServiceValidator.swift in Sources */,
 				D9CA258A21F5D91800B6E292 /* Comment.swift in Sources */,
@@ -615,6 +638,7 @@
 				D9CA259E21F5FEFC00B6E292 /* ModelFactory.swift in Sources */,
 				D9C99D0721F3AA4300BB3A1E /* NetworkClientTests.swift in Sources */,
 				D9CA257F21F5D1FF00B6E292 /* PostTests.swift in Sources */,
+				D9CA259A21F5E9C000B6E292 /* PostsAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

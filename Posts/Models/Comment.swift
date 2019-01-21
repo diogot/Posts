@@ -9,7 +9,7 @@
 import Foundation
 import Tagged
 
-struct Comment: Decodable {
+struct Comment: Decodable, Equatable {
     let id: Id
     let postId: Post.Id
     let name: String

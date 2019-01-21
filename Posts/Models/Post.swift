@@ -9,7 +9,7 @@
 import Foundation
 import Tagged
 
-struct Post: Decodable {
+struct Post: Decodable, Equatable {
     let id: Id
     let userId: User.Id
     let title: String
