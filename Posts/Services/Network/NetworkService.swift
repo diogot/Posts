@@ -20,6 +20,7 @@ public final class NetworkService: NetworkServiceProvider {
     private let urlProvider: NetworkServiceURLProvider
     private let validationProvider: NetWorkServiceResponseValidationProvider
     private let decodingProvider: NetworkServiceDecodingProvider
+    private let backgroundScheduler: SchedulerType
 
     public init(networkClient: NetworkClientProvider,
                 headersProvider: NetworkServiceHeadersProvider,
@@ -33,13 +34,19 @@ public final class NetworkService: NetworkServiceProvider {
         self.urlProvider = urlProvider
         self.validationProvider = validationProvider
         self.decodingProvider = decodingProvider
+
+        backgroundScheduler = SerialDispatchQueueScheduler(qos: .userInitiated,
+                                                           internalSerialQueueName: "com.diogot.posts-NetworkService")
     }
 
     public func submit<T: Decodable>(_ request: NetworkRequest) -> Single<T> {
         return createClientRequest(from: request)
+            .subscribeOn(backgroundScheduler)
             .flatMap(networkClient.submit)
+            .observeOn(backgroundScheduler)
             .flatMap(validationProvider.parse)
             .flatMap(decodingProvider.decode)
+            .observeOn(MainScheduler.instance)
     }
 
     private func createClientRequest(from request: NetworkRequest) -> Single<NetworkClientRequest> {
