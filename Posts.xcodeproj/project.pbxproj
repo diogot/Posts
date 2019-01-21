@@ -37,6 +37,7 @@
 		D9CA257021F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA256F21F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift */; };
 		D9CA257221F4F8FB00B6E292 /* NetworkServiceValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA257121F4F8FB00B6E292 /* NetworkServiceValidatorTests.swift */; };
 		D9CA257421F4FA5500B6E292 /* NetworkServiceDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA257321F4FA5500B6E292 /* NetworkServiceDecoderTests.swift */; };
+		D9CA257721F543C700B6E292 /* PrimitiveSequence+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9CA257621F543C700B6E292 /* PrimitiveSequence+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		D9CA256F21F4F64700B6E292 /* NetworkServiceURLBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceURLBuilderTests.swift; sourceTree = "<group>"; };
 		D9CA257121F4F8FB00B6E292 /* NetworkServiceValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceValidatorTests.swift; sourceTree = "<group>"; };
 		D9CA257321F4FA5500B6E292 /* NetworkServiceDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceDecoderTests.swift; sourceTree = "<group>"; };
+		D9CA257621F543C700B6E292 /* PrimitiveSequence+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrimitiveSequence+Extensions.swift"; sourceTree = "<group>"; };
 		EDF39E066157124C96E76C9A /* Pods-Posts.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.release.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 		D94A586321F3502D00249946 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				D9CA257521F543AA00B6E292 /* Extensions */,
 				D94A588C21F3658000249946 /* Generated */,
 				D94A588521F3620400249946 /* Resources */,
 				D970A0A821F36D0B0088E653 /* Services */,
@@ -256,6 +259,14 @@
 				D9CA256D21F4F25900B6E292 /* Model.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D9CA257521F543AA00B6E292 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9CA257621F543C700B6E292 /* PrimitiveSequence+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -508,6 +519,7 @@
 				D9C99D1A21F4D16D00BB3A1E /* NetworkServiceDecoder.swift in Sources */,
 				D94A586521F3502D00249946 /* AppDelegate.swift in Sources */,
 				D970A0AA21F36D250088E653 /* Log.swift in Sources */,
+				D9CA257721F543C700B6E292 /* PrimitiveSequence+Extensions.swift in Sources */,
 				D9C99D1221F4D0AB00BB3A1E /* NetworkServiceURLBuilder.swift in Sources */,
 				D970A0B021F36ED10088E653 /* NetworkClient.swift in Sources */,
 				D9C99D1C21F4D19800BB3A1E /* NetworkServiceError.swift in Sources */,

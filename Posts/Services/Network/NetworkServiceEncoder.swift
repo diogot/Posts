@@ -11,15 +11,12 @@ import RxSwift
 
 final class NetworkServiceEncoder: NetworkServiceEncodingProvider {
     func body(for request: NetworkRequest) -> Single<Data?> {
-        guard let data = request.data else {
-            return .just(nil)
-        }
+        return .just {
+            guard let data = request.data else {
+                return nil
+            }
 
-        do {
-            let body = try JSONEncoder().encode(EncodableBox(value: data))
-            return Single.just(body)
-        } catch {
-            return Single.error(error)
+            return try JSONEncoder().encode(EncodableBox(value: data))
         }
     }
 

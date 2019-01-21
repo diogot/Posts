@@ -11,10 +11,12 @@ import RxSwift
 
 final class NetworkServiceValidator: NetWorkServiceResponseValidationProvider {
     func parse(_ response: NetworkClientResponse) -> Single<Data> {
-        guard 200 ..< 300 ~= response.statusCode else {
-            return .error(NetworkServiceError.requestFailed(response: response))
-        }
+        return .just {
+            guard 200 ..< 300 ~= response.statusCode else {
+                throw NetworkServiceError.requestFailed(response: response)
+            }
 
-        return .just(response.data)
+            return response.data
+        }
     }
 }

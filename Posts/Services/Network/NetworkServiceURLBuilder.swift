@@ -11,18 +11,21 @@ import RxSwift
 
 final class NetworkServiceURLBuilder: NetworkServiceURLProvider {
     func url(for request: NetworkRequest) -> Single<URL> {
-        // swiftlint:disable:next force_unwrapping
-        let baseURL = URL(string: "https://jsonplaceholder.typicode.com")!
-            .appendingPathComponent(request.resource.rawValue)
+        return .just {
+            // swiftlint:disable:next force_unwrapping
+            let baseURL = URL(string: "https://jsonplaceholder.typicode.com")!
+                .appendingPathComponent(request.resource.rawValue)
 
-        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
-        urlComponents?.queryItems = request.parameters?
-            .compactMap { URLQueryItem(name: $0.key, value: $0.value) }
-            .sorted(by: { $0.name < $1.name })
-        guard let url = urlComponents?.url else {
-            return .error(NetworkServiceError.invalidURL)
+            var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
+            urlComponents?.queryItems =
+                request.parameters?
+                    .compactMap { URLQueryItem(name: $0.key, value: $0.value) }
+                    .sorted(by: { $0.name < $1.name })
+            guard let url = urlComponents?.url else {
+                throw NetworkServiceError.invalidURL
+            }
+
+            return url
         }
-
-        return .just(url)
     }
 }
