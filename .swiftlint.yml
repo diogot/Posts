@@ -1,6 +1,3 @@
-disabled_rules:
-    - todo
-
 opt_in_rules:
     - closure_spacing
     - conditional_returns_on_newline

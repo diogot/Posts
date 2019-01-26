@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		86346F6642C3C4B572AFFABE /* Pods_Posts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A7BCEFFDBEF90C4D080873F /* Pods_Posts.framework */; };
 		94FD485F851450D309826560 /* Pods_PostsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379D449CBD9B015D05F1DCA3 /* Pods_PostsTests.framework */; };
+		D90096C221F74C9C007EB9AB /* PostListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90096C121F74C9C007EB9AB /* PostListViewController.swift */; };
+		D9357AB421FAA14600384731 /* PostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357AB321FAA14600384731 /* PostsDataSource.swift */; };
+		D9357AB621FBDF2D00384731 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357AB521FBDF2D00384731 /* AppCoordinator.swift */; };
+		D9357AB921FBE2BD00384731 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357AB821FBE2BD00384731 /* PostDetailViewController.swift */; };
 		D94A586521F3502D00249946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A586421F3502D00249946 /* AppDelegate.swift */; };
 		D94A586C21F3502F00249946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94A586B21F3502F00249946 /* Assets.xcassets */; };
 		D94A586F21F3502F00249946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94A586D21F3502F00249946 /* LaunchScreen.storyboard */; };
@@ -73,6 +77,10 @@
 		7A7BCEFFDBEF90C4D080873F /* Pods_Posts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Posts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ACDDF9BC66B72D227F94815 /* Pods-PostsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PostsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PostsTests/Pods-PostsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BC8F54E0589550297F430CA1 /* Pods-Posts.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Posts.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Posts/Pods-Posts.debug.xcconfig"; sourceTree = "<group>"; };
+		D90096C121F74C9C007EB9AB /* PostListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListViewController.swift; sourceTree = "<group>"; };
+		D9357AB321FAA14600384731 /* PostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDataSource.swift; sourceTree = "<group>"; };
+		D9357AB521FBDF2D00384731 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D9357AB821FBE2BD00384731 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
 		D94A586121F3502D00249946 /* Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94A586421F3502D00249946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94A586B21F3502F00249946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -166,6 +174,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D90096BF21F74C19007EB9AB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D9357AB721FBE21000384731 /* PostDetail */,
+				D90096C021F74C25007EB9AB /* PostList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D90096C021F74C25007EB9AB /* PostList */ = {
+			isa = PBXGroup;
+			children = (
+				D90096C121F74C9C007EB9AB /* PostListViewController.swift */,
+				D9357AB321FAA14600384731 /* PostsDataSource.swift */,
+			);
+			path = PostList;
+			sourceTree = "<group>";
+		};
+		D9357AB721FBE21000384731 /* PostDetail */ = {
+			isa = PBXGroup;
+			children = (
+				D9357AB821FBE2BD00384731 /* PostDetailViewController.swift */,
+			);
+			path = PostDetail;
+			sourceTree = "<group>";
+		};
 		D94A585821F3502C00249946 = {
 			isa = PBXGroup;
 			children = (
@@ -189,12 +223,14 @@
 		D94A586321F3502D00249946 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				D90096BF21F74C19007EB9AB /* Screens */,
 				D9CA257521F543AA00B6E292 /* Extensions */,
 				D94A588C21F3658000249946 /* Generated */,
 				D9CA257821F5CE7600B6E292 /* Models */,
 				D94A588521F3620400249946 /* Resources */,
 				D970A0A821F36D0B0088E653 /* Services */,
 				D94A586421F3502D00249946 /* AppDelegate.swift */,
+				D9357AB521FBDF2D00384731 /* AppCoordinator.swift */,
 			);
 			path = Posts;
 			sourceTree = "<group>";
@@ -610,6 +646,7 @@
 			files = (
 				D94A588B21F3653500249946 /* L10n.swift in Sources */,
 				D9C99D1821F4D15200BB3A1E /* NetworkServiceHeadersBuilder.swift in Sources */,
+				D9357AB621FBDF2D00384731 /* AppCoordinator.swift in Sources */,
 				D9CA259121F5E34500B6E292 /* PostsService.swift in Sources */,
 				D970A0AC21F36E970088E653 /* NetworkClientResponse.swift in Sources */,
 				D9C99D0C21F3B6AC00BB3A1E /* NetworkService.swift in Sources */,
@@ -620,10 +657,13 @@
 				D9C99D1221F4D0AB00BB3A1E /* NetworkServiceURLBuilder.swift in Sources */,
 				D970A0B021F36ED10088E653 /* NetworkClient.swift in Sources */,
 				D9C99D1C21F4D19800BB3A1E /* NetworkServiceError.swift in Sources */,
+				D9357AB921FBE2BD00384731 /* PostDetailViewController.swift in Sources */,
+				D90096C221F74C9C007EB9AB /* PostListViewController.swift in Sources */,
 				D970A0B221F36F130088E653 /* URLSessionProvider.swift in Sources */,
 				D9C99D0E21F3BD1600BB3A1E /* NetworkRequest.swift in Sources */,
 				D9CA259321F5E51C00B6E292 /* PostsAPI.swift in Sources */,
 				D9C99D1421F4D0EE00BB3A1E /* NetworkServiceEncoder.swift in Sources */,
+				D9357AB421FAA14600384731 /* PostsDataSource.swift in Sources */,
 				D9C99D1621F4D10E00BB3A1E /* NetworkServiceValidator.swift in Sources */,
 				D9CA258A21F5D91800B6E292 /* Comment.swift in Sources */,
 				D9CA257A21F5D0F500B6E292 /* Post.swift in Sources */,

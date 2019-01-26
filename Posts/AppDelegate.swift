@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import RxSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private var appCoordinator: AppCoordinator?
     var window: UIWindow?
 
     func application(_ application: UIApplication,
@@ -20,6 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let navigationController = UINavigationController()
         window.rootViewController = navigationController
+
+        appCoordinator = AppCoordinator(with: navigationController)
+
+        appCoordinator?.start()
 
         window.makeKeyAndVisible()
 
