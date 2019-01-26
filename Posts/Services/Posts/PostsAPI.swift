@@ -28,14 +28,12 @@ final class PostsAPI: PostsAPIProvider {
     }
 
     func comments(of postId: Post.Id) -> Single<[Comment]> {
-        let request = NetworkRequest(resource: .commentsOf(postId: postId.rawValue), method: .get)
+        let request = NetworkRequest(resource: .comments, method: .get, parameters: ["postId": String(postId.rawValue)])
         return network.submit(request)
     }
 }
 
 private extension NetworkRequest.Resource {
     static let posts = NetworkRequest.Resource(rawValue: "/posts")
-    static func commentsOf(postId: Int) -> NetworkRequest.Resource {
-        return NetworkRequest.Resource("/posts/\(postId)/comments")
-    }
+    static let comments = NetworkRequest.Resource("/comments")
 }

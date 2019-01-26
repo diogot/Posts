@@ -44,8 +44,8 @@ class PostsAPITests: XCTestCase {
         expect(netework.submitCalls) == 1
         expect(netework.recievedRequests).to(haveCount(1))
         let request = netework.recievedRequests.first
-        expect(request?.resource.rawValue) == "/posts/1/comments"
+        expect(request?.resource.rawValue) == "/comments"
         expect(request?.method) == .get
-        expect(request?.parameters).to(beNil())
+        expect(request?.parameters) == ["postId": "1"]
         expect(request?.data).to(beNil())
     }}
