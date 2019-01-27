@@ -3,6 +3,7 @@ platform :ios, '12.1'
 target 'Posts' do
   use_frameworks!
 
+  pod 'RxCocoa', '~> 4.4.0'
   pod 'RxSwift', '~> 4.4.0'
   pod 'SwiftGen', '~> 6.0.2'
   pod 'SwiftLint', '~> 0.30.0'

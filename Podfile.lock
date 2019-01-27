@@ -4,6 +4,8 @@ PODS:
   - RxBlocking (4.4.0):
     - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
+  - RxCocoa (4.4.0):
+    - RxSwift (~> 4.0)
   - RxSwift (4.4.0):
     - RxAtomic (~> 4.4)
   - SwiftGen (6.0.2)
@@ -13,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - Nimble (~> 7.3.2)
   - RxBlocking (~> 4.4.0)
+  - RxCocoa (~> 4.4.0)
   - RxSwift (~> 4.4.0)
   - SwiftGen (~> 6.0.2)
   - SwiftLint (~> 0.30.0)
@@ -23,6 +26,7 @@ SPEC REPOS:
     - Nimble
     - RxAtomic
     - RxBlocking
+    - RxCocoa
     - RxSwift
     - SwiftGen
     - SwiftLint
@@ -32,11 +36,12 @@ SPEC CHECKSUMS:
   Nimble: 5e94a8cacb355943c6c87198035dc4adbb0f10e4
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
   RxBlocking: 138ad53217434444d6eeeb4fb406a45431d92e31
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
   SwiftGen: e5b047067aa84082826a0c4f1c4c2ddc95bcf74c
   SwiftLint: 4e37cb5cd33435170dfd09fba089f41fdbf64d53
   Tagged: 20ad99855b2d2bdfff0b9d6937ff4f2a123489fa
 
-PODFILE CHECKSUM: 587e9b7200012eadef3aaca80c69b7eb6e1b4521
+PODFILE CHECKSUM: 6747a30792752ece3cb406f74d120da892891522
 
 COCOAPODS: 1.5.3
