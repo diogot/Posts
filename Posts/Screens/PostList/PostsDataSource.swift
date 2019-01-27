@@ -6,32 +6,43 @@
 //  Copyright © 2019 Diogo. All rights reserved.
 //
 
+import RxCocoa
 import RxSwift
 import UIKit
 
-protocol PostListDataSouceDelegate: class {
-    func postsDidLoad(in dataSource: PostListDataSouce)
-}
-
 final class PostListDataSouce: NSObject {
     private let postsService = PostsService()
-    weak var delegate: PostListDataSouceDelegate?
 
-    private var posts = [Post]() {
-        didSet {
-            delegate?.postsDidLoad(in: self)
-        }
+    var stateDriver: Driver<State> {
+        return stateSubject.asDriver(onErrorRecover: { Driver.just(.error($0)) })
     }
+
+    private var stateSubject = BehaviorSubject(value: State.idle)
+
+    enum State {
+        case loading
+        case newPosts
+        case idle
+        case error(Error)
+    }
+
+    private var posts = [Post]()
+
     private let disposeBag = DisposeBag()
 
     func loadPosts() {
-        // TODO: loading state
-        // TODO: error handling
+        let stateObserver = stateSubject.asObserver()
         postsService.posts()
+            .do(onSubscribe: {
+                stateObserver.onNext(.loading)
+            })
             .subscribe(onNext: { [weak self] posts in
                 self?.posts = posts
+                stateObserver.onNext(.newPosts)
             }, onError: {
-                Log.error($0)
+                stateObserver.onNext(.error($0))
+            }, onCompleted: {
+                stateObserver.onNext(.idle)
             })
             .disposed(by: disposeBag)
     }

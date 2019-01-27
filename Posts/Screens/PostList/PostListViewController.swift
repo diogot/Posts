@@ -6,6 +6,7 @@
 //  Copyright © 2019 Diogo. All rights reserved.
 //
 
+import RxCocoa
 import RxSwift
 import UIKit
 
@@ -21,9 +22,34 @@ final class PostListViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        refreshControl = UIRefreshControl()
+
+        refreshControl?.addTarget(self, action: #selector(loadPosts), for: .valueChanged)
         dataSource.configure(tableView)
-        dataSource.delegate = self
+        dataSource.stateDriver.drive(Binder(self) { me, state in
+            switch state {
+            case .loading:
+                me.refreshControl?.beginRefreshing()
+            case .newPosts:
+                me.tableView.reloadData()
+            case .idle:
+                me.refreshControl?.endRefreshing()
+            case .error(let error):
+                me.refreshControl?.endRefreshing()
+                me.display(error)
+            }
+        }).disposed(by: disposeBag)
         dataSource.loadPosts()
+    }
+
+    private func display(_ error: Error) {
+        // TODO: better error management
+        let done = UIAlertAction(title: "Done", style: .default)
+        let alert = UIAlertController(title: "Error",
+                                      message: error.localizedDescription,
+                                      preferredStyle: .alert)
+        alert.addAction(done)
+        present(alert, animated: true)
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -35,10 +61,8 @@ final class PostListViewController: UITableViewController {
         Log.debug(post)
         delegate?.didSelect(post, in: self)
     }
-}
 
-extension PostListViewController: PostListDataSouceDelegate {
-    func postsDidLoad(in dataSource: PostListDataSouce) {
-        tableView.reloadData()
+    @objc private func loadPosts() {
+        dataSource.loadPosts()
     }
 }
