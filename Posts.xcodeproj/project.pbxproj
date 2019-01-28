@@ -13,6 +13,10 @@
 		D9357AB421FAA14600384731 /* PostsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357AB321FAA14600384731 /* PostsDataSource.swift */; };
 		D9357AB621FBDF2D00384731 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357AB521FBDF2D00384731 /* AppCoordinator.swift */; };
 		D9357AB921FBE2BD00384731 /* PostDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357AB821FBE2BD00384731 /* PostDetailViewController.swift */; };
+		D9357ABC21FE778200384731 /* IdentifiableForReuse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357ABB21FE778200384731 /* IdentifiableForReuse.swift */; };
+		D9357ABE21FE789900384731 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357ABD21FE789900384731 /* UITableView+Extensions.swift */; };
+		D9357AC021FE7A9500384731 /* ModelableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357ABF21FE7A9500384731 /* ModelableView.swift */; };
+		D9357AC221FE7B0E00384731 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9357AC121FE7B0E00384731 /* TableViewCell.swift */; };
 		D94A586521F3502D00249946 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94A586421F3502D00249946 /* AppDelegate.swift */; };
 		D94A586C21F3502F00249946 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D94A586B21F3502F00249946 /* Assets.xcassets */; };
 		D94A586F21F3502F00249946 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D94A586D21F3502F00249946 /* LaunchScreen.storyboard */; };
@@ -81,6 +85,10 @@
 		D9357AB321FAA14600384731 /* PostsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDataSource.swift; sourceTree = "<group>"; };
 		D9357AB521FBDF2D00384731 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		D9357AB821FBE2BD00384731 /* PostDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailViewController.swift; sourceTree = "<group>"; };
+		D9357ABB21FE778200384731 /* IdentifiableForReuse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdentifiableForReuse.swift; sourceTree = "<group>"; };
+		D9357ABD21FE789900384731 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		D9357ABF21FE7A9500384731 /* ModelableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelableView.swift; sourceTree = "<group>"; };
+		D9357AC121FE7B0E00384731 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D94A586121F3502D00249946 /* Posts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D94A586421F3502D00249946 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D94A586B21F3502F00249946 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,6 +208,16 @@
 			path = PostDetail;
 			sourceTree = "<group>";
 		};
+		D9357ABA21FE770C00384731 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D9357ABB21FE778200384731 /* IdentifiableForReuse.swift */,
+				D9357ABF21FE7A9500384731 /* ModelableView.swift */,
+				D9357AC121FE7B0E00384731 /* TableViewCell.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		D94A585821F3502C00249946 = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +241,7 @@
 		D94A586321F3502D00249946 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				D9357ABA21FE770C00384731 /* Common */,
 				D90096BF21F74C19007EB9AB /* Screens */,
 				D9CA257521F543AA00B6E292 /* Extensions */,
 				D94A588C21F3658000249946 /* Generated */,
@@ -342,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				D9CA257621F543C700B6E292 /* PrimitiveSequence+Extensions.swift */,
+				D9357ABD21FE789900384731 /* UITableView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -646,6 +666,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9357ABC21FE778200384731 /* IdentifiableForReuse.swift in Sources */,
 				D94A588B21F3653500249946 /* L10n.swift in Sources */,
 				D9C99D1821F4D15200BB3A1E /* NetworkServiceHeadersBuilder.swift in Sources */,
 				D9357AB621FBDF2D00384731 /* AppCoordinator.swift in Sources */,
@@ -665,11 +686,14 @@
 				D9C99D0E21F3BD1600BB3A1E /* NetworkRequest.swift in Sources */,
 				D9CA259321F5E51C00B6E292 /* PostsAPI.swift in Sources */,
 				D9C99D1421F4D0EE00BB3A1E /* NetworkServiceEncoder.swift in Sources */,
+				D9357ABE21FE789900384731 /* UITableView+Extensions.swift in Sources */,
 				D9357AB421FAA14600384731 /* PostsDataSource.swift in Sources */,
+				D9357AC221FE7B0E00384731 /* TableViewCell.swift in Sources */,
 				D9C99D1621F4D10E00BB3A1E /* NetworkServiceValidator.swift in Sources */,
 				D9CA258A21F5D91800B6E292 /* Comment.swift in Sources */,
 				D9CA257A21F5D0F500B6E292 /* Post.swift in Sources */,
 				D970A0AE21F36EAE0088E653 /* NetworkClientRequest.swift in Sources */,
+				D9357AC021FE7A9500384731 /* ModelableView.swift in Sources */,
 				D9CA259521F5E56D00B6E292 /* UsersAPI.swift in Sources */,
 				D9C99D1021F3BDF800BB3A1E /* NetworkMethod.swift in Sources */,
 				D9CA258421F5D65600B6E292 /* User.swift in Sources */,
