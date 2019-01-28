@@ -10,6 +10,8 @@ import RxCocoa
 import RxSwift
 import UIKit
 
+private typealias Cell = TableViewCell<PostSummaryView, PostSummaryView.ViewModel>
+
 final class PostListDataSouce: NSObject {
     private let postsService = PostsService()
 
@@ -48,8 +50,7 @@ final class PostListDataSouce: NSObject {
     }
 
     func configure(_ tableView: UITableView) {
-        // TODO: custom cell
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.registerCell(Cell.self)
         tableView.dataSource = self
     }
 
@@ -77,12 +78,17 @@ extension PostListDataSouce: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(Cell.self, for: indexPath)
 
         let post = posts[indexPath.row]
-
-        cell.textLabel?.text = post.title
+        cell.update(with: .init(post))
 
         return cell
+    }
+}
+
+extension PostSummaryView.ViewModel {
+    init(_ post: Post) {
+        title = post.title
     }
 }
