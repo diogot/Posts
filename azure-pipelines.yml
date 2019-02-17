@@ -6,6 +6,9 @@
 pool:
   vmImage: 'macOS-10.13'
 
+trigger:
+- master
+
 steps:
 - script: git submodule update --init --recursive
   displayName: Update git submodules
@@ -13,3 +16,5 @@ steps:
   displayName: Update bundler
 - script: rake setup
   displayName: 'configure the project'
+- script: rake xcode:tests
+  displayName: 'run tests'
