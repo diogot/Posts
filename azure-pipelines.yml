@@ -9,5 +9,7 @@ pool:
 steps:
 - script: git submodule update --init --recursive
   displayName: Update git submodules
+- script: bundle update --bundler
+  displayName: Update bundler
 - script: rake setup
   displayName: 'configure the project'
