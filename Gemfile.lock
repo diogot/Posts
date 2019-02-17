@@ -86,7 +86,7 @@ DEPENDENCIES
   synx (~> 0.2.1)
 
 RUBY VERSION
-   ruby 2.5.3p105
+   ruby 2.6.1p33
 
 BUNDLED WITH
-   1.17.1
+   1.17.2
