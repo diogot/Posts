@@ -7,5 +7,7 @@ pool:
   vmImage: 'macOS-10.13'
 
 steps:
+- script: git submodule update --init --recursive
+  displayName: Update git submodules
 - script: rake setup
   displayName: 'configure the project'
