@@ -29,6 +29,8 @@ steps:
     testRunner: JUnit
     testResultsFiles: $(TEST_REPORTS_DEFAULT_PATH)/**
   condition: succeededOrFailed()
+- script: rake danger
+  displayName: 'Run Danger'
 - task: PublishPipelineArtifact@0
   inputs:
     artifactName: 'logs'
