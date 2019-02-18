@@ -13,7 +13,7 @@ pool:
 variables:
   BUNDLER_PATH: vendor/bundle
   ARTIFACTS_DEFAULT_PATH: build
-  TEST_REPORTS_DEFAULT_PATH: reports 
+  TEST_REPORTS_DEFAULT_PATH: reports
 
 steps:
 - script: git submodule update --init --recursive
@@ -37,3 +37,7 @@ steps:
   inputs:
     artifactName: 'testResults'
     targetPath: $(TEST_REPORTS_DEFAULT_PATH)
+- script: rake danger
+  displayName: 'Run Danger'
+  env:
+    DANGER_GITHUB_API_TOKEN: $(danger-github-api-token)
